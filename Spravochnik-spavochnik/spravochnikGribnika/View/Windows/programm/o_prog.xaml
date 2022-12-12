@@ -1,0 +1,47 @@
+﻿<Window x:Class="spravochnikGribnika.View.Windows.programm.o_prog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:spravochnikGribnika.View.Windows.programm"
+        mc:Ignorable="d"
+        Icon="/Image\grib.ico"
+        Title="О программе"  Width="800" Height="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#dab3f2">
+        <Frame x:Name="Infom" />
+        <Button Height="30" Width="30" Grid.Column="1" Margin="1100,500,1,0" Background="transparent" Click="behand_Click">
+            <Image Source="/Image/therow.jpg"/>
+        </Button>
+        <Grid>
+
+            <TextBlock  FontSize="15"
+                        HorizontalAlignment="Center"
+                        Background="#dab3f2">
+                    <LineBreak/>  
+Производственная работа студента и разработчика 3 курса <LineBreak />
+Группы ИС-32 
+<LineBreak /> <LineBreak />
+Парада Сергей Сергеевич<LineBreak /><LineBreak />
+                   
+Полное имя приложения: <LineBreak />
+(Разработка ИСС «Справочник грибника») <LineBreak /> <LineBreak />
+
+  Цель: <LineBreak />
+В кротчайшие сроки помочь грибнику найти информацию о грибе. <LineBreak /> <LineBreak />
+
+  Решения: <LineBreak />
+Приложения поможет вам решить какие грибы ядовитые, а какие можно употреблять в пищу <LineBreak /> <LineBreak />
+
+  Особенности: <LineBreak />
+Простота нахождения информации <LineBreak /> <LineBreak />
+  Основные этапы работы: <LineBreak />
+1.	Разработать приложения для помощи людям найти информацию. <LineBreak />
+2.	Сделать простые и информативные окна приложения <LineBreak /><LineBreak />
+
+  Сроки выполнения: <LineBreak /> <LineBreak />
+3 недели
+
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Window>

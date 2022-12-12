@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F83E6D5-AA09-44B1-B7D7-82D7B4BFBB80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>spravochnikGribnika</RootNamespace>
+    <AssemblyName>spravochnikGribnika</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\FileWorker.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\PageViewModel.cs" />
+    <Compile Include="View\Pages\conditionally\PagesConditionally.xaml.cs">
+      <DependentUpon>PagesConditionally.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\edible\PageEdible.xaml.cs">
+      <DependentUpon>PageEdible.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\falses\Pagefalses.xaml.cs">
+      <DependentUpon>Pagefalses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\garden\PageGrden.xaml.cs">
+      <DependentUpon>PageGrden.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\inedible\Pageinedible.xaml.cs">
+      <DependentUpon>Pageinedible.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\poisonous\Poisonous.xaml.cs">
+      <DependentUpon>Poisonous.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\protivoiadie\PageProtiv.xaml.cs">
+      <DependentUpon>PageProtiv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\ydov\PageYdov.xaml.cs">
+      <DependentUpon>PageYdov.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\conditionally\Conditionally.xaml.cs">
+      <DependentUpon>Conditionally.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\edible\edible.xaml.cs">
+      <DependentUpon>edible.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\False\falsess.xaml.cs">
+      <DependentUpon>falsess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\garden\Garden.xaml.cs">
+      <DependentUpon>Garden.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\GlavMenu.xaml.cs">
+      <DependentUpon>GlavMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\inedible\inedible.xaml.cs">
+      <DependentUpon>inedible.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\poisonous\poisonous.xaml.cs">
+      <DependentUpon>poisonous.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\programm\o_prog.xaml.cs">
+      <DependentUpon>o_prog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\protivoiadie\protivoyd.xaml.cs">
+      <DependentUpon>protivoyd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\ydov\WinYdov.xaml.cs">
+      <DependentUpon>WinYdov.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\false\Рядовка мыльная.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\Pages\conditionally\PagesConditionally.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\edible\PageEdible.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\falses\Pagefalses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\garden\PageGrden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\inedible\Pageinedible.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\poisonous\Poisonous.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\protivoiadie\PageProtiv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\ydov\PageYdov.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\conditionally\Conditionally.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\edible\edible.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\False\falsess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\garden\Garden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\GlavMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\inedible\inedible.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\poisonous\poisonous.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\programm\o_prog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\protivoiadie\protivoyd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\ydov\WinYdov.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\trava.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\aidov.jpg" />
+    <Resource Include="Image\grib.ico" />
+    <Resource Include="Image\gribocheck.jpg" />
+    <Resource Include="Image\log.jpg" />
+    <Resource Include="Image\no_ced.jpg" />
+    <Resource Include="Image\ogor.jpg" />
+    <Resource Include="Image\us1.jpg" />
+    <Resource Include="Image\us2.jpg" />
+    <Resource Include="Image\us3.jpg" />
+    <Resource Include="Image\us4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\false\Ложная лисичка.jpg" />
+    <Resource Include="Image\false\Ложный валуй.jpg" />
+    <Resource Include="Image\false\Ложный белый.jpg" />
+    <Resource Include="Image\false\Сатаниский гриб .jpg" />
+    <Resource Include="Image\inedible\Гигроцибе красная.jpg" />
+    <Resource Include="Image\inedible\Лопастник курчавый.jpg" />
+    <Resource Include="Image\inedible\Рогатик желтый.jpg" />
+    <Resource Include="Image\inedible\Паутинник козлиный.jpg" />
+    <Resource Include="Image\inedible\Ложнодождевик бородавчатый.jpg" />
+    <Resource Include="Image\Ogorod\Шампиньон.jpg" />
+    <Resource Include="Image\Ogorod\Лисичка.jpg" />
+    <Resource Include="Image\Ogorod\Маслёнок.jpg" />
+    <Resource Include="Image\Ogorod\Подосиновик.jpg" />
+    <Resource Include="Image\Ogorod\Вешенка.jpg" />
+    <Resource Include="Image\edible\Лисичка серая.jpg" />
+    <Resource Include="Image\edible\Масленок лиственничный.jpg" />
+    <Resource Include="Image\edible\Мокруха розовая.jpg" />
+    <Resource Include="Image\edible\Вешенка дубовая.jpg" />
+    <Resource Include="Image\edible\Вешенка ильмовая.jpg" />
+    <Resource Include="Image\edible\Вешенка обыкновенная.jpg" />
+    <Resource Include="Image\poisonous\Груздь желтый.jpg" />
+    <Resource Include="Image\poisonous\Белый гриб сосновый.jpg" />
+    <Resource Include="Image\poisonous\Белый гриб дубовый.jpg" />
+    <Resource Include="Image\poisonous\Белый гриб медный.jpg" />
+    <Resource Include="Image\poisonous\Белый гриб боровик.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\poisonous\Белый гриб березовый.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\poisonous\Белый гриб еловый.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\edible\Вешенка осенняя.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\therow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\false\Рядовка отличающаяся.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\false\Опёнок серно-жёлтый.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\troe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\inedible\Рогатик крыночковидный.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\inedible\Паутинник полускрученный.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Ogorod\Подберезовик.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Ogorod\Трюфель.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\conditionally\Белянка.jpg" />
+    <Resource Include="Image\conditionally\Валуй.jpg" />
+    <Resource Include="Image\conditionally\Волнушка розовая.jpg" />
+    <Resource Include="Image\conditionally\Гладыш %28Млечник%29.jpg" />
+    <Resource Include="Image\conditionally\Горькушка.jpg" />
+    <Resource Include="Image\conditionally\Груздь дубовый %28подорешник%29.jpg" />
+    <Resource Include="Image\conditionally\Груздь желтый %28ямчатый%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Ydov\Бледная поганка.jpg" />
+    <Resource Include="Image\Ydov\Волоконница волокнистая.jpg" />
+    <Resource Include="Image\Ydov\Волоконница земляная.jpg" />
+    <Resource Include="Image\Ydov\Волоконница острая.jpg" />
+    <Resource Include="Image\Ydov\Волоконница патуйяра %28краснеющая%29.jpg" />
+    <Resource Include="Image\Ydov\Гебелома горчичная.jpg" />
+    <Resource Include="Image\Ydov\Говорушка восковатая.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\protivoaidie\Бледная поганка%28противоядие%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\protivoaidie\Волоконница волокнистая%28противоядие%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\protivoaidie\Волоконница земляная%28противоядие%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\protivoaidie\Волоконница острая%28противоядие%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\protivoaidie\Волоконница патуйяра %28краснеющая%29%28противоядие%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\protivoaidie\Гебелома горчичная%28противоядие%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\protivoaidie\Говорушка восковатая %28сероватая, листолюбивая%29%28противоядие%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\shprice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\protivoaidie\Медицина.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\forests.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\poisonous\Груздь белый.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\poisonous\Рыжик настоящий еловый.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\edible\Вешенка рожковидная.jpg" />
+    <Resource Include="Image\edible\Рядовка пятнистая.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\conditionally\Волнушка белая.jpg" />
+    <Resource Include="Image\conditionally\Груздь осиновый.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\inedible\Ложнодождевик.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\inedible\Паутинник камфорный.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Ogorod\Опёнок зимний.jpg" />
+    <Resource Include="Image\Ogorod\Шиитаке.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\false\Дубовик укорененный.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Ydov\Мицена чистая.jpg" />
+    <Resource Include="Image\Ydov\Мухомор красный.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\InformationalFile\conditionally\Белянка.txt" />
+    <Resource Include="View\InformationalFile\conditionally\Валуй.txt" />
+    <Resource Include="View\InformationalFile\conditionally\Волнушка белая.txt" />
+    <Resource Include="View\InformationalFile\conditionally\Волнушка розовая.txt" />
+    <Resource Include="View\InformationalFile\conditionally\Гладыш %28Млечник%29.txt" />
+    <Resource Include="View\InformationalFile\conditionally\Горькушка.txt" />
+    <Resource Include="View\InformationalFile\conditionally\Груздь дубовый %28подорешник%29.txt" />
+    <Resource Include="View\InformationalFile\conditionally\Груздь желтый %28ямчатый%29.txt" />
+    <Resource Include="View\InformationalFile\conditionally\Груздь осиновый.txt" />
+    <Resource Include="View\InformationalFile\edible\Вешенка дубовая.txt" />
+    <Resource Include="View\InformationalFile\edible\Вешенка ильмовая.txt" />
+    <Resource Include="View\InformationalFile\edible\Вешенка обыкновенная.txt" />
+    <Resource Include="View\InformationalFile\edible\Вешенка осенняя.txt" />
+    <Resource Include="View\InformationalFile\edible\Вешенка рожковидная.txt" />
+    <Resource Include="View\InformationalFile\edible\Лисичка серая.txt" />
+    <Resource Include="View\InformationalFile\edible\Масленок лиственничный.txt" />
+    <Resource Include="View\InformationalFile\edible\Мокруха розовая.txt" />
+    <Resource Include="View\InformationalFile\edible\Рядовка пятнистая.txt" />
+    <Resource Include="View\InformationalFile\false\Дубовик укорененный.txt" />
+    <Resource Include="View\InformationalFile\false\Ложная лисичка.txt" />
+    <Resource Include="View\InformationalFile\false\Ложный белый.txt" />
+    <Resource Include="View\InformationalFile\false\Ложный валуй.txt" />
+    <Resource Include="View\InformationalFile\false\Опёнок серно-жёлтый.txt" />
+    <Resource Include="View\InformationalFile\false\Рядовка мыльная.txt" />
+    <Resource Include="View\InformationalFile\false\Рядовка отличающаяся.txt" />
+    <Resource Include="View\InformationalFile\false\Сатаниский гриб.txt" />
+    <Resource Include="View\InformationalFile\inedible\Гигроцибе красная.txt" />
+    <Resource Include="View\InformationalFile\inedible\Ложнодождевик бородавчатый.txt" />
+    <Resource Include="View\InformationalFile\inedible\Ложнодождевик.txt" />
+    <Resource Include="View\InformationalFile\inedible\Лопастник курчавый.txt" />
+    <Resource Include="View\InformationalFile\inedible\Паутинник камфорный.txt" />
+    <Resource Include="View\InformationalFile\inedible\Паутинник козлиный.txt" />
+    <Resource Include="View\InformationalFile\inedible\Паутинник полускрученный.txt" />
+    <Resource Include="View\InformationalFile\inedible\Рогатик желтый.txt" />
+    <Resource Include="View\InformationalFile\inedible\Рогатик крыночковидный.txt" />
+    <Resource Include="View\InformationalFile\Lognie\Ложная лисичка.txt" />
+    <Resource Include="View\InformationalFile\Lognie\Ложный белый.txt" />
+    <Resource Include="View\InformationalFile\Lognie\Ложный валуй.txt" />
+    <Resource Include="View\InformationalFile\Lognie\Опёнок серно-жёлтый.txt" />
+    <Resource Include="View\InformationalFile\Lognie\Рядовка мыльная.txt" />
+    <Resource Include="View\InformationalFile\Lognie\Рядовка отличающаяся.txt" />
+    <Resource Include="View\InformationalFile\Lognie\Сатаниский гриб .txt" />
+    <Resource Include="View\InformationalFile\Ogorod\Вешенка.txt" />
+    <Resource Include="View\InformationalFile\Ogorod\Лисичка.txt" />
+    <Resource Include="View\InformationalFile\Ogorod\Маслёнок.txt" />
+    <Resource Include="View\InformationalFile\Ogorod\Опёнок зимний.txt" />
+    <Resource Include="View\InformationalFile\Ogorod\Подберезовик.txt" />
+    <Resource Include="View\InformationalFile\Ogorod\Подосиновик.txt" />
+    <Resource Include="View\InformationalFile\Ogorod\Трюфель.txt" />
+    <Resource Include="View\InformationalFile\Ogorod\Шампиньон.txt" />
+    <Resource Include="View\InformationalFile\Ogorod\Шиитаке.txt" />
+    <Resource Include="View\InformationalFile\poisonous\Белый гриб березовый.txt" />
+    <Resource Include="View\InformationalFile\poisonous\Белый гриб боровик.txt" />
+    <Resource Include="View\InformationalFile\poisonous\Белый гриб дубовый.txt" />
+    <Resource Include="View\InformationalFile\poisonous\Белый гриб еловый.txt" />
+    <Resource Include="View\InformationalFile\poisonous\Белый гриб медный.txt" />
+    <Resource Include="View\InformationalFile\poisonous\Белый гриб сосновый.txt" />
+    <Resource Include="View\InformationalFile\poisonous\Груздь белый.txt" />
+    <Resource Include="View\InformationalFile\poisonous\Груздь желтый.txt" />
+    <Resource Include="View\InformationalFile\poisonous\Рыжик настоящий еловый.txt" />
+    <Resource Include="View\InformationalFile\protivoaidie\Бледная поганка%28противоядие%29.txt" />
+    <Resource Include="View\InformationalFile\protivoaidie\Волоконница волокнистая%28противоядие%29.txt" />
+    <Resource Include="View\InformationalFile\protivoaidie\Волоконница земляная%28противоядие%29.txt" />
+    <Resource Include="View\InformationalFile\protivoaidie\Волоконница острая%28противоядие%29.txt" />
+    <Resource Include="View\InformationalFile\protivoaidie\Волоконница патуйяра %28краснеющая%29%28противоядие%29.txt" />
+    <Resource Include="View\InformationalFile\protivoaidie\Гебелома горчичная%28противоядие%29.txt" />
+    <Resource Include="View\InformationalFile\protivoaidie\Говорушка восковатая %28сероватая, листолюбивая%29%28противоядие%29.txt" />
+    <Resource Include="View\InformationalFile\protivoaidie\Медицина.txt" />
+    <Resource Include="View\InformationalFile\ydov\Бледная поганка.txt" />
+    <Resource Include="View\InformationalFile\ydov\Волоконница волокнистая.txt" />
+    <Resource Include="View\InformationalFile\ydov\Волоконница земляная.txt" />
+    <Resource Include="View\InformationalFile\ydov\Волоконница острая.txt" />
+    <Resource Include="View\InformationalFile\ydov\Волоконница патуйяра %28краснеющая%29.txt" />
+    <Resource Include="View\InformationalFile\ydov\Гебелома горчичная.txt" />
+    <Resource Include="View\InformationalFile\ydov\Говорушка восковатая.txt" />
+    <Resource Include="View\InformationalFile\ydov\Мицена чистая.txt" />
+    <Resource Include="View\InformationalFile\ydov\Мухомор красный.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\tr.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

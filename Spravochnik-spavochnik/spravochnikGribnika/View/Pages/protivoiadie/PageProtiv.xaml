@@ -1,0 +1,35 @@
+﻿<Page x:Class="spravochnikGribnika.View.Pages.protivoiadie.PageProtiv"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:spravochnikGribnika.View.Pages.protivoiadie"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageProtiv">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="protiv" Background="#52baeb"
+                  SelectedItem="{Binding SelectedUser}"
+                  HorizontalAlignment="Left">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock HorizontalAlignment="Center"
+                               VerticalAlignment="Center">
+                        <Image Source="{Binding Image}"
+                               Width="100" Height="100"/>
+                        <Run Text="{Binding Name}"/>
+                    </TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ScrollViewer Grid.ColumnSpan="2" Margin="275,0,0,0">
+            <StackPanel>
+                <TextBlock Text="{Binding Text}" Margin="1" FontSize="15"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="spravochnikGribnika.View.Windows.inedible.inedible"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:spravochnikGribnika.View.Windows.inedible"
+        mc:Ignorable="d"
+        Icon="/Image\grib.ico"
+        Title="Несъедобный" Width="1200" Height="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#7feb9b">
+        <Frame x:Name="Infar" Margin="0" />
+        <Button Height="30" Width="30" Grid.Column="1" Margin="1100,500,1,0" Background="transparent" Click="Behand_Click">
+            <Image Source="/Image/therow.jpg"/>
+        </Button>
+    </Grid>
+</Window>

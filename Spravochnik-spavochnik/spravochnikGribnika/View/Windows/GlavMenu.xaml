@@ -1,0 +1,71 @@
+﻿<Window x:Class="spravochnikGribnika.View.Windows.GlavMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:spravochnikGribnika.View.Windows"
+        mc:Ignorable="d"
+        Icon="/Image\grib.ico"
+        Title="Главное меню" Height="650" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Image/forests.jpg"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button  Grid.Column="1" Grid.Row="1" Background="transparent" Margin="63,0,63,30" Click="Vkus_Click" Cursor="Hand"
+                     Name ="poisonous">
+                <Image Source="/Image\us1.jpg" Margin="0"/>
+            </Button>
+            <Button  Grid.Column="2" Grid.Row="1" Background="transparent" Margin="63,0,63,30" Click="edible_Click" Cursor="Hand"
+                     Name ="edible">
+                <Image Source="/Image\us2.jpg" Margin="0"/>
+            </Button>
+            <Button  Grid.Column="3" Grid.Row="1" Background="transparent" Margin="63,0,63,30" Click="conditionally_Click" Cursor="Hand"
+                     Name="conditionally">
+                <Image Source="/Image\us4.jpg" Margin="0"/>
+            </Button>
+            <Button  Grid.Column="1" Grid.Row="2" Background="transparent" Margin="63,0,63,30" Click="inedible_Click" Cursor="Hand" Name ="inedible">
+                <Image Source="/Image\no_ced.jpg" Margin="0"/>
+            </Button>
+            <Button  Grid.Column="2" Grid.Row="2" Background="transparent" Margin="63,0,63,30" Click="ogorod_Click" Cursor="Hand" 
+                     Name="Ogorod">
+                <Image Source="/Image\ogor.jpg" Margin="0"/>
+            </Button>
+            <Button  Grid.Column="3" Grid.Row="2" Background="transparent" Margin="63,0,63,30" Click="false_Click" Name ="false" Cursor="Hand" >
+                <Image Source="/Image\log.jpg" Margin="0"/>
+            </Button>
+            <Button  Grid.Column="2" Grid.Row="3" Background="transparent" Margin="63,0,63,30" Click="ydov_Click" Name ="ydov" Cursor="Hand">
+                <Image Source="/Image\aidov.jpg" Margin="0"/>
+            </Button>
+            <Button  Grid.Column="2" Grid.Row="5" x:Name="protivoaidie" Background="transparent" Margin="42,0,42,30" Click="vs_Click" Height="74" VerticalAlignment="Bottom" Cursor="Hand">
+                <Image Source="/Image\shprice.jpg" Margin="0"/>
+            </Button>
+            <Button Grid.Column="5" Grid.Row="0" Margin="60,0,0,60"  Background="transparent" Content="О программе" Foreground="White" FontSize="20" Click="oprog_Click"/>
+
+            <Label Grid.ColumnSpan="5" Grid.Row="0" Content="Категория грибов:" HorizontalAlignment="Center"  Margin="0,10,0,0" FontStyle="Normal" FontFamily="Sylfaen" FontSize="50" Foreground="White" ></Label>
+            <Label Grid.ColumnSpan="3" Grid.Row="5" Content="Лечение:" HorizontalAlignment="Center"  Margin="157,70,157,0" FontStyle="Normal" FontFamily="Sylfaen" FontSize="18" Foreground="White" Grid.Column="1" Height="34" VerticalAlignment="Top" ></Label>
+            <Label Grid.Column="1" Grid.Row="1" Content="Вкусные"  HorizontalAlignment="Center" Margin="0,70,0,0" FontStyle="Normal" FontFamily="Sylfaen" FontSize="18" Foreground="White" ></Label>
+            <Label  Grid.Column="2" Grid.Row="1" Content="Съедобные:"  HorizontalAlignment="Center" Margin="0,70,0,0" FontStyle="Normal" FontFamily="Sylfaen" FontSize="18" Foreground="White" ></Label>
+            <Label   Grid.Column="3" Grid.Row="1"  Content="Условно съедобные:"   HorizontalAlignment="Center" Margin="0,70,0,0" FontStyle="Normal" FontFamily="Sylfaen" FontSize="16" Foreground="White" ></Label>
+            <Label  Grid.Column="1" Grid.Row="2" Content="Несъедобные:"  HorizontalAlignment="Center" Margin="0,70,0,0" FontStyle="Normal" FontFamily="Sylfaen" FontSize="18" Foreground="White" ></Label>
+            <Label Grid.Column="2" Grid.Row="2" Content="Огородные:"  HorizontalAlignment="Center" Margin="0,70,0,0" FontStyle="Normal" FontFamily="Sylfaen" FontSize="18" Foreground="White" ></Label>
+            <Label Grid.Column="3" Grid.Row="2" Content="Ложные:"  HorizontalAlignment="Center" Margin="0,70,0,0" FontStyle="Normal" FontFamily="Sylfaen" FontSize="18" Foreground="White" ></Label>
+            <Label  Grid.Column="2" Grid.Row="3" Content="Ядовитые:" HorizontalAlignment="Center"  Margin="0,70,0,0" FontStyle="Normal" FontFamily="Sylfaen" FontSize="18" Foreground="#f55858" ></Label>
+        </Grid>
+    </Grid>
+</Window>
